@@ -12,17 +12,12 @@ def get_flags_passed_in_from_terminal():
 args = get_flags_passed_in_from_terminal()
 print(args.model)
 
-mlflow.set_tracking_uri("file:/C:\Users\marcm\mlruns")
+#mlflow.set_tracking_uri("file:/C:\Users\marcm\mlruns")
 
-# models = {
-#     'Linear': linear_model.LinearRegression(),
-#     'Ridge': linear_model.Ridge(),
-#     'Lasso': linear_model.Lasso(),
-#     'ElasticNet': linear_model.ElasticNet(),
-#     'Tweedee': linear_model.TweedieRegressor()
-# }
+model = getattr(linear_model, args.model)()
 
-model = getattr(linear_model, args.model)
+print(model)
+print(type(model))
 
 X, y = load_boston(return_X_y = True)
 

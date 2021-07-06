@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/marcm/MLFlow-SkLearn-Experiment/mlruns/0/b966bf5c79fd4c248f88bf241492b1cc/artifacts
+end_time: 1625603124499
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: b966bf5c79fd4c248f88bf241492b1cc
+run_uuid: b966bf5c79fd4c248f88bf241492b1cc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1625603124214
+status: 3
+tags: []
+user_id: marcm
