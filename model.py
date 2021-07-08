@@ -5,7 +5,7 @@ import argparse
 
 def get_flags_passed_in_from_terminal():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--model')
+	parser.add_argument('--model', default='LinearRegression')
 	args = parser.parse_args()
 	return args
 
@@ -27,3 +27,8 @@ with mlflow.start_run():
     
     score = model.score(X, y)
     mlflow.log_metric('R-Squared', score)
+
+    mlflow.sklearn.log_model(
+		sk_model=model,
+		artifact_path="sklearn-model"
+	)
